@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'primereact/resources/themes/lara-light-cyan/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css';
+
+/* Espaciado para botones en diálogos de confirmación */
+.p-confirm-dialog .p-confirm-dialog-footer {
+  display: flex !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+.p-confirm-dialog .p-confirm-dialog-footer button {
+  min-width: 120px !important;
+  margin: 0 !important;
+}
+
+/* Espaciado adicional para el reject button */
+.p-confirm-dialog .p-confirm-dialog-reject {
+  margin-right: 10px !important;
+}

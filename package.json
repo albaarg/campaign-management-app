@@ -1,0 +1,20 @@
+{
+  "name": "campaign-management-app",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn dev:shell\" \"yarn dev:campaigns\" \"yarn dev:people\"",
+    "dev:shell": "yarn workspace app-shell dev",
+    "dev:campaigns": "yarn workspace campaigns-mf dev",
+    "dev:people": "yarn workspace people-mf dev",
+    "build": "yarn workspaces foreach -pt run build",
+    "install:all": "yarn install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
